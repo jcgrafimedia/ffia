@@ -15,7 +15,8 @@ header(id="header")
 			a(href="http://outlook.com/usmp.pe" , target="_blank")
 				i(class="fa fa-envelope fa-lg")
 
-		//MODAL MAPA
+		//	MODAL MAPA
+			–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 		div(class="remodal" data-remodal-id="resultado1" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc")
 			button(data-remodal-action="close" class="remodal-close" aria-label="Close")
@@ -26,20 +27,20 @@ header(id="header")
 	// 	MENU PRINCIPAL
 		–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-	div(id="menu_dinamic" , class="row")
+	div(id="container_menu" , class="menu_dynamic" , class="row")
 
-		a(id="logo" , href="{{ ruta_base }}" , class="col-xs-4 col-xs-offset-1 col-md-3")
+		a(id="usmp_logo" , class="logo" , href="{{ ruta_base }}" , class="col-xs-4 col-xs-offset-1 col-md-3")
 			img(src="{{ ruta_base }}assets/img/usmp_fia.png" , class="img-responsive")
 
-		nav(id="nav_principal" , class="col-md-7 hidden-xs hidden-sm")
-			a(href="http://www.usmp.edu.pe/" , target="_black" , id="usmp") USMP
+		nav(id="main_nav" , class="nav_principal" , class="col-md-7 hidden-xs hidden-sm")
+			a(href="http://www.usmp.edu.pe/" , target="_black" , id="usmp" , class="usmp") USMP
 
-			a(href="" , id="facultad") FACULTAD
+			a(href="" , id="facultad" , class="facultad") FACULTAD
 				div(class="triangulo_inf")
 
-			nav(id="menu_fa" , style="display: none;" , class="row")
-				a(href="http://localhost/usmp_fia/facultad/decano") Palabras del decano
-				a(href="http://localhost/usmp_fia/facultad/autoridades") Autoridades
+			nav(id="menu_fa" , class="hidden-sm hidden-md hidden-lg")
+				a(href="{{ ruta_base }}facultad/decano") Palabras del decano
+				a(href="{{ ruta_base }}facultad/autoridades") Autoridades
 				a(href="directorio") Directorio
 				a(href="acreditaciones") Acreditaciones
 				a(href="convenios") Convenios
@@ -47,10 +48,10 @@ header(id="header")
 				a(href="historia") Historia
 				a(href="organigrama") Organigrama
 
-			a(href="" , id="escuelas") ESCUELAS
+			a(href="" , id="escuelas" , class="escuelas") ESCUELAS
 				div(class="triangulo_inf")
 
-			nav(id="menu_esc" , style="display: none;" , class="row")
+			nav(id="menu_esc" , class="hidden-sm hidden-md hidden-lg")
 				a(href="#") Ciencias Aeronáuticas
 				a(href="#") Ingeniería Civil
 				a(href="#") Ingeniería de Computación y Sistemas
@@ -59,13 +60,13 @@ header(id="header")
 				a(href="#") Ingeniería en Industrias Alimentarias
 				a(href="#") Arquitectura
 
-			a(href="http://www.usmp.edu.pe/posgradofia/" , id="posgrados" , target="_black") POSGRADOS
+			a(href="http://www.usmp.edu.pe/posgradofia/" , id="posgrados" , class="posgrados" , target="_black") POSGRADOS
 
-			a(href="http://www.usmp.edu.pe/ivuc/" , id="institutos" , target="_black") INSTITUTOS
+			a(href="http://www.usmp.edu.pe/ivuc/" , id="institutos" , class="institutos" , target="_black") INSTITUTOS
 
-			a(href="http://www.epu.edu.pe/" , id="epu" , target="_black") EPU
+			a(href="http://www.epu.edu.pe/" , id="epu" , class="epu" , target="_black") EPU
 
-			a(href="http://admision.usmp.edu.pe/" , id="admision" , target="_black") ADMISIÓN
+			a(href="http://admision.usmp.edu.pe/" , id="admision" , class="admision" , target="_black") ADMISIÓN
 
 
 

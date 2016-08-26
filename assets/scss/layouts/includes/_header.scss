@@ -27,23 +27,20 @@
 
   } //end-container_nav_icons
 
-  #menu_dinamic {
+  .menu_dynamic {
     background-color: rgba(0 , 0 , 0 , 0.5);
-    #logo {
+    .logo {
       @include flex(row, flex-start , center);
       img {
         width: 100%;
       }
     }
-    #nav_principal {
-      height: 80px;
+    .nav_principal {
       margin-left: 20px;
       @include flex(row, flex-start , center);
       a {
-        //background-color: red;
         color: rgb(255, 255, 255);
         text-decoration: none;
-        display: block;
         .triangulo_inf {
           @include triangulo_inf(5px, 5px, 5px, $bgc_content);
           margin-top: 5px;
@@ -54,40 +51,40 @@
         transition: 0.6s;
       }
       #facultad , #escuelas {
-        position: relative;
         @include flex(column, null , center);
-      }
-      .sub_menu_fa {
-        position: absolute;
-        top: 80px;
-        background-color: $bgc_primary;
-        @include flex(column, flex-start , stretch);
-        a {
-          padding: 4px 10px 4px 10px;
-        }
-        a:hover {
-          background-color: rgba(191, 191, 191, 0.3);
-          transition: 0.6s;
-        }
-      }
-      .sub_menu_esc {
-        position: absolute;
-        top: 80px;
-        background-color: $bgc_primary;
-        @include flex(column, flex-start , stretch);
-        a {
-          padding: 4px 10px 4px 10px;
-        }
-        a:hover {
-          background-color: rgba(191, 191, 191, 0.3);
-          transition: 0.6s;
-        }
       }
     }
 
   } //end-menu_dinamic
 
+  .menu_dynamic2 {
+    .logo2 {
+      @include flex(row, flex-start , center);
+      img {
+        width: 100%;
+      }
+    }
+    .nav_principal2 {
+      margin-left: 20px;
+      @include flex(row, flex-start , center);
+      a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        .triangulo_inf {
+          @include triangulo_inf(5px, 5px, 5px, $bgc_content);
+          margin-top: 5px;
+        }
+      }
+      a:hover {
+        background-color: $bgc_primary;
+        transition: 0.6s;
+      }
+      .facultad2 , .escuelas2 {
+        @include flex(column, null , center);
+      }
+    }
 
+  } //end-menu_dinamic
 
 } //end-header
 
@@ -96,9 +93,9 @@
    ––––––––––––––––––––––––––––––––––––––––––– */
 
 @media (max-width: 550px){
-  #menu_dinamic {
+  .menu_dynamic {
     height: 30px;
-    #logo {
+    .logo {
       height: 30px;
     }
   }
@@ -108,9 +105,9 @@
   ––––––––––––––––––––––––––––––––––––––––––– */
 
 @media (min-width: 551px) and (max-width: 749px){
-  #menu_dinamic {
+  .menu_dynamic {
     height: 50px;
-    #logo {
+    .logo {
       height: 50px;
     }
   }
@@ -119,10 +116,10 @@
 /* Tablet Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
 
-@media (min-width: 750px) and (max-width: 999px){
-  #menu_dinamic {
+@media (min-width: 750px) and (max-width: 991px){
+  .menu_dynamic {
     height: 60px;
-    #logo {
+    .logo {
       height: 60px;
     }
   }
@@ -131,21 +128,59 @@
 /* Desktop Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
 
-@media (min-width: 991px) and (max-width: 1199px){
-  #menu_dinamic {
+@media (min-width: 992px) and (max-width: 1199px){
+  .menu_dynamic {
     height: 80px;
-    #logo {
+    transition: 0.6s;
+    .logo {
       height: 80px;
+      transition: 0.6s;
     }
-    #nav_principal {
+    .nav_principal {
+      height: 80px;
+      transition: 0.6s;
       a {
         font-size: 1.2rem;
         padding: 31.5px 15px 31.5px 15px;
+        transition: 0.6s;
       }
-      #facultad , #escuelas {
+      .facultad , .escuelas {
         padding: 31.5px 15px 21.5px 15px;
+        transition: 0.6s;
       } 
     }
+  }
+
+  // Efecto Scroll en Header
+
+  .menu_dynamic2 {
+    height: 60px;
+    background-color: rgb(42, 55, 68);
+    transition: 0.6s;
+  }
+
+  .logo2 {
+    width: 20%;
+    height: 60px;
+    margin-right: 5%;
+    transition: 0.6s;
+  }
+
+  .nav_principal2 {
+    height: 60px;
+    transition: 0.6s;
+  }
+
+  .usmp2 , .posgrados2 , .institutos2 , .epu2 , .admision2 {
+    font-size: 1.2rem;
+    padding: 21.5px 15px 21.5px 15px;
+    transition: 0.6s;
+  }
+
+  .facultad2 , .escuelas2 {
+    font-size: 1.2rem;
+    padding: 21.5px 15px 11.5px 15px;
+    transition: 0.6s;
   }
   /*
   .sub_menu_fa {
@@ -163,21 +198,60 @@
    ––––––––––––––––––––––––––––––––––––––––––– */
 
 @media (min-width: 1200px){
-  #menu_dinamic {
+  .menu_dynamic {
     height: 80px;
-    #logo {
+    transition: 0.6s;
+    .logo {
       height: 80px;
+      transition: 0.6s;
     }
-    #nav_principal {
+    .nav_principal {
+      height: 80px;
+      transition: 0.6s;
       a {
         font-size: 1.5rem;
         padding: 29.5px 15px 29.5px 15px;
+        transition: 0.6s;
       }
-      #facultad , #escuelas {
+      .facultad , .escuelas {
+        font-size: 1.5rem;
         padding: 29.5px 15px 19.5px 15px;
+        transition: 0.6s;
       } 
     }
   }
+
+  // Efecto Scroll en Header
+
+  .menu_dynamic2 {
+    height: 60px;
+    background-color: rgb(42, 55, 68);
+    transition: 0.6s;
+  }
+
+  .logo2 {
+    width: 20%;
+    height: 60px;
+    margin-right: 5%;
+    transition: 0.6s;
+  }
+
+  .nav_principal2 {
+    height: 60px;
+    transition: 0.6s;
+  }
+
+  .usmp2 , .posgrados2 , .institutos2 , .epu2 , .admision2 {
+    font-size: 1.5rem;
+    padding: 19.5px 15px 19.5px 15px;
+    transition: 0.6s;
+  }
+
+  .facultad2 , .escuelas2 {
+    padding: 19.5px 15px 9.5px 15px;
+    transition: 0.6s;
+  }
+
   /*
   .sub_menu_fa {
     top: 80px;

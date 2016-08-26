@@ -3,10 +3,10 @@
    =========================================== */
 
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0 none;
+  margin: 0px;
+  padding: 0px;
+  outline: 0px;
+  border: 0px none;
   font-size: 100%;
   font-style: inherit;
   font-family: inherit;
@@ -15,6 +15,7 @@
   text-decoration: none;
   list-style: none;
 }
+
 
 /* ===========================================
    General Imports
@@ -27,17 +28,11 @@
 @import "layouts/includes/_menu-secondary";
 @import "layouts/includes/_main-social";
 
-
 /* ===========================================
    Contents Style
    =========================================== */
 
 @import "_ctn-main";
-
-
-
-
-
 
 /* ===========================================
    General Style
@@ -50,34 +45,3 @@
 .center-block {
   @include flex(row, center , center);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.content {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-}
-
-.container {
-  min-width: 80%;
-  height: auto;
-  margin-bottom: 28px;
-  @include flex(row, space-between , null);
-  flex-wrap: wrap;
-}
-*/
-
