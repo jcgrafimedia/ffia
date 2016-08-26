@@ -1,0 +1,96 @@
+/* Menu Secundario
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+.menu_secondary {
+  width: 100%;
+  background-color: $bgc_content;
+  .container_icons{
+    //background-color: green;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    .content_icons {
+      width: 100%;
+      height: 140px;
+      background-color: #FFFFFF;
+      @include flex(column, center , center);
+      div {
+        width: 80px;
+        height: 80px;
+        background-color: $bgc_primary;
+        border-radius: 50%;
+        @include flex(row, center , center);
+        img {
+          display: table;
+        }
+      }
+      span {
+        margin-top: 10px;
+        font-size: 1.4rem;
+        color: $bgc_primary;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+    .content_icons:hover {
+      div {
+        background-color: $bgc_secondary;
+        transition: 0.5s;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+
+} //end-menu_secondary
+  
+/* Divider-Triangle
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+.divider_triangle {
+  width: 100%;
+  height: auto;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+  @include flex(row, center, center);
+
+  .triangulo_inf {
+    @include triangulo_inf(50px, 50px, 28px, $bgc_content);
+  }
+
+} //end-pre_content
+
+
+/* Mobile Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (max-width: 550px){
+
+}
+
+/* Phablet Styles
+  ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 551px) and (max-width: 749px){
+
+}
+
+/* Tablet Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 750px) and (max-width: 999px){
+
+}
+
+/* Desktop Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 1000px) and (max-width: 1199px){
+
+}
+
+/* Desktop HD Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 1200px){
+
+}

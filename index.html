@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="fia">
+  <head ng-controller="route">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Facultad de Ingenieria y arquitectura">
+    <meta name="keywords" content="usmp , fia , ffia , ingenieria , arquitectura">
+    <meta name="author" content="Juan Carlos Raúl Contreras Meneses">
+    <link rel="shortcut icon" href="http://localhost:8004/assets/img/logo_usmp.ico">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/normalize.min.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/styles.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/remodal.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/remodal-default-theme.css">
+    <title>USMP FIA</title>
+  </head>
+  <body ng-controller="route">
+    <div id="main_container">
+      <!-- 	HEADER
+      –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      
+      -->
+      <header id="header">
+        <!-- 	MENU DE ICONOS
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <div id="container_nav_icons" class="row">
+          <div class="nav_icons col-sm-10"><a href="http://www.usmp.edu.pe/" target="_black"><i class="fa fa-home fa-lg"></i></a><a href="#resultado1"><i class="fa fa-map-marker fa-lg"></i></a><a href="http://outlook.com/usmp.pe" target="_blank"><i class="fa fa-envelope fa-lg"></i></a></div>
+          <!--MODAL MAPA-->
+          <div data-remodal-id="resultado1" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" class="remodal">
+            <button data-remodal-action="close" aria-label="Close" class="remodal-close"></button>
+            <section class="map col-xs-12">
+              <div id="container_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.585081210205!2d-76.94434908503688!3d-12.072043745658373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6e79034dc63%3A0x393610bdc506718b!2sFacultad+de+Ingenieria+y+Arquitectura!5e0!3m2!1ses!2spe!4v1455204747377" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- 	MENU PRINCIPAL
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <div id="menu_dinamic" class="row"><a id="logo" href="{{ ruta_base }}" class="col-xs-4 col-xs-offset-1 col-md-3"><img src="{{ ruta_base }}assets/img/usmp_fia.png" class="img-responsive"></a>
+          <nav id="nav_principal" class="col-md-7 hidden-xs hidden-sm"><a href="http://www.usmp.edu.pe/" target="_black" id="usmp">USMP</a><a href="" id="facultad">FACULTAD
+              <div class="triangulo_inf"></div></a>
+            <nav id="menu_fa" style="display: none;" class="row"><a href="http://localhost/usmp_fia/facultad/decano">Palabras del decano</a><a href="http://localhost/usmp_fia/facultad/autoridades">Autoridades</a><a href="directorio">Directorio</a><a href="acreditaciones">Acreditaciones</a><a href="convenios">Convenios</a><a href="anual">Memoria anual usmp</a><a href="historia">Historia</a><a href="organigrama">Organigrama</a></nav><a href="" id="escuelas">ESCUELAS
+              <div class="triangulo_inf"></div></a>
+            <nav id="menu_esc" style="display: none;" class="row"><a href="#">Ciencias Aeronáuticas</a><a href="#">Ingeniería Civil</a><a href="#">Ingeniería de Computación y Sistemas</a><a href="#">Ingeniería Electrónica</a><a href="#">Ingeniería Industrial</a><a href="#">Ingeniería en Industrias Alimentarias</a><a href="#">Arquitectura</a></nav><a href="http://www.usmp.edu.pe/posgradofia/" id="posgrados" target="_black">POSGRADOS</a><a href="http://www.usmp.edu.pe/ivuc/" id="institutos" target="_black">INSTITUTOS</a><a href="http://www.epu.edu.pe/" id="epu" target="_black">EPU</a><a href="http://admision.usmp.edu.pe/" id="admision" target="_black">ADMISIÓN</a>
+          </nav>
+        </div>
+      </header>
+      <!--
+      div(id="menu_dinamic" , class="menu_content")
+      	div(id="main_menu")
+      		a(id="logo" , href="http://localhost/usmp_fia/")
+      			img(src="http://localhost/usmp_fia/assets/img/usmp_fia.png" , style="cursor:pointer")
+      		nav
+      			ul
+      				li: a(href="http://www.usmp.edu.pe/" , target="_black" , id="usmp") USMP
+      				li
+      					a(href="" , id="facultad") FACULTAD
+      						div(class="triangulo_inf")
+      					ul(id="menu_fa" , style="display: none")
+      						li: a(href="http://localhost/usmp_fia/facultad/decano") Palabras del decano
+      						li: a(href="http://localhost/usmp_fia/facultad/autoridades") Autoridades
+      						li: a(href="directorio") Directorio
+      						li: a(href="acreditaciones") Acreditaciones
+      						li: a(href="convenios") Convenios
+      						li: a(href="anual") Memori anual usmp
+      						li: a(href="historia") Historia
+      						li: a(href="organigrama") Organigrama
+      				li 
+      					a(href="" , id="escuelas") ESCUELAS
+      						div(class="triangulo_inf")
+      					ul(id="menu_esc" , style="display: none")
+      						li: a(href="#") Ciencias Aeronáuticas
+      						li: a(href="#") Ingeniería Civil
+      						li: a(href="#") Ingeniería de Computación y Sistemas
+      						li: a(href="#") Ingeniería Electrònica
+      						li: a(href="#") Ingeniería Industrial
+      						li: a(href="#") Ingeniería en Industrias Alimentarias
+      						li: a(href="#") Arquitectura
+      				li: a(href="http://www.usmp.edu.pe/posgradofia/" , id="posgrados" , target="_black") POSGRADOS
+      				li: a(href="http://www.usmp.edu.pe/ivuc/" , id="institutos" , target="_black") INSTITUTOS
+      				li: a(href="http://www.epu.edu.pe/" , id="epu" , target="_black") EPU
+      				li: a(href="http://admision.usmp.edu.pe/" , id="admision" , target="_black") ADMISIÓN
+      div(id="container_wrap")
+      	div(class="menu-wrap")
+      			nav(class="menu")
+      				div(class="icon-list")
+      
+      					a(href="http://www.usmp.edu.pe/index.php" , target="_black")
+      						i(class="fa fa-home fa-lg")
+      							span Usmp
+      
+      					a(href="#")
+      						i(class="fa fa-university fa-lg")
+      							span Facultad
+      						ul(id="accordion11" , style="display: none")
+      							li: a(href="#") Palabras del decano
+      							li: a(href="#") Autoridades
+      							li: a(href="#") Directorio
+      							li: a(href="#") Acreditaciones
+      							li: a(href="#") Convenios
+      							li: a(href="#") Memori anual usmp
+      							li: a(href="#") Historia
+      							li: a(href="#") Organigrama
+      
+      					a(href="#")
+      						i(class="fa fa-book fa-lg")
+      							span Escuelas
+      						ul(id="accordion12" , style="display: none")
+      							li: a(href="#") Ciencias Aeronáuticas
+      							li: a(href="#") Ingeniería Civil
+      							li: a(href="#") Ingeniería de Computación y Sistemas
+      							li: a(href="#") Ingeniería Electrònica
+      							li: a(href="#") Ingeniería Industrial
+      							li: a(href="#") Ingeniería en Industrias Alimentarias
+      							li: a(href="#") Arquitectura
+      
+      					a(href="http://www.usmp.edu.pe/posgradofia/" , target="_black")
+      						i(class="fa fa-graduation-cap fa-lg")
+      							span Posgrados
+      
+      					a(href="http://www.usmp.edu.pe/ivuc/" , target="_black")
+      						i(class="fa fa-building-o fa-lg")
+      							span Institutos
+      
+      					a(href="http://www.epu.edu.pe/" , target="_black")
+      						i(class="fa fa-briefcase fa-lg")
+      							span EPU
+      
+      					a(href="http://admision.usmp.edu.pe/" , target="_black")
+      						i(class="fa fa-pencil-square-o fa-lg")
+      							span Admisión
+      
+      			div(class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z")
+      				svg(xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none")
+      					path(d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z")
+      -->
+      <!-- 	Imagen Principal
+      –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      
+      --><img id="img_principal" src="assets/img/header.jpg" class="img-responsive">
+      <!-- 	MENU SECUNDARIO
+      –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      
+      -->
+      <div class="menu_secondary">
+        <div class="container-fluid">
+          <div class="container_icons col-xs-6 col-md-2 col-md-offset-1"><a href="#" class="content_icons">
+              <div><img id="alumno" src="{{ ruta_base }}assets/img/icons/icon_alumno.svg"></div><span>ALUMNOS</span></a></div>
+          <div class="container_icons col-xs-6 col-md-2"><a href="#" class="content_icons">
+              <div><img id="docentes" src="{{ ruta_base }}assets/img/icons/icon_docentes.svg"></div><span>DOCENTES</span></a></div>
+          <div class="container_icons col-xs-6 col-md-2"><a href="#" class="content_icons">
+              <div><img id="grados" src="{{ ruta_base }}assets/img/icons/icon_grados.svg"></div><span>GRADOS Y TITULOS</span></a></div>
+          <div class="container_icons col-xs-6 col-md-2"><a href="http://intranet.usmp.edu.pe/procesoAcademico/loginSecure.aspx" target="_black" class="content_icons">
+              <div><img id="intranet" src="{{ ruta_base }}assets/img/icons/icon_intranet.svg"></div><span>INTRANET</span></a></div>
+          <div class="container_icons col-xs-6 col-md-2 col-xs-offset-3 col-md-offset-0"><a href="http://www.sibus.usmp.edu.pe/" target="_black" class="content_icons">
+              <div><img id="biblioteca" src="{{ ruta_base }}assets/img/icons/icon_biblioteca.svg"></div><span>BIBLIOTECA</span></a></div>
+        </div>
+        <div class="divider_triangle">
+          <div class="triangulo_inf"></div>
+        </div>
+      </div>
+      <!-- 	CONTENIDO PRINCIPAL
+      –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      
+      -->
+      <section class="container">
+        <!-- 	NOTICIAS
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <section class="noticias col-xs-12 col-md-6">
+          <header>
+            <h2>NOTICIAS</h2>
+          </header>
+          <article>
+            <header>20 de enero 2016</header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae vero hic quasi sit error nesciunt inventore, iure minus magni in praesentium sed animi delectus eos nulla? Voluptatum quia earum, quaerat!</p>
+          </article>
+          <article>
+            <header>20 de enero 2016</header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae vero hic quasi sit error nesciunt inventore, iure minus magni in praesentium sed animi delectus eos nulla? Voluptatum quia earum, quaerat!</p>
+          </article>
+          <article>
+            <header>20 de enero 2016</header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae vero hic quasi sit error nesciunt inventore, iure minus magni in praesentium sed animi delectus eos nulla? Voluptatum quia earum, quaerat!</p>
+          </article>
+          <article>
+            <header>20 de enero 2016</header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae vero hic quasi sit error nesciunt inventore, iure minus magni in praesentium sed animi delectus eos nulla? Voluptatum quia earum, quaerat!</p>
+          </article><a href="#" class="row">VER MÁS NOTICIAS</a>
+        </section>
+        <!-- 	LINK
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <section class="content_link col-xs-12 col-md-6">
+          <div class="row">
+            <div class="col-xs-4"><a href="#"><img src="assets/img/img.jpg" class="img-responsive hidden-xs hidden-sm"><span class="col-md-12">AULAS<br>VIRTUALES</span>
+                <div class="divider_triangle">
+                  <div class="triangulo_sup"></div>
+                </div></a></div>
+            <div class="col-xs-4"><a href="#"><img src="assets/img/img.jpg" class="img-responsive hidden-xs hidden-sm"><span class="col-md-12">ACREDITACIÓN<br>INTERNACIONAL</span>
+                <div class="divider_triangle">
+                  <div class="triangulo_sup"></div>
+                </div></a></div>
+            <div class="col-xs-4"><a href="#"><img src="assets/img/img.jpg" class="img-responsive hidden-xs hidden-sm"><span class="col-md-12">ASOCIACIÓN DE<br>GRADUADOS</span>
+                <div class="divider_triangle">
+                  <div class="triangulo_sup"></div>
+                </div></a></div>
+          </div>
+          <div style="margin-top: 20px;" class="row">
+            <div class="col-xs-4"><a href="#"><img src="assets/img/img.jpg" class="img-responsive hidden-xs hidden-sm"><span class="col-md-12">BOLSA DE<br>TRABAJO</span>
+                <div class="divider_triangle">
+                  <div class="triangulo_sup"></div>
+                </div></a></div>
+            <div class="col-xs-4"><a href="#"><img src="assets/img/img.jpg" class="img-responsive hidden-xs hidden-sm"><span class="col-md-12">FIA<br>DATA</span>
+                <div class="divider_triangle">
+                  <div class="triangulo_sup"></div>
+                </div></a></div>
+            <div class="col-xs-4"><a href="#"><img src="assets/img/img.jpg" class="img-responsive hidden-xs hidden-sm"><span class="col-md-12">REVISTA<br>INFOFIA</span>
+                <div class="divider_triangle">
+                  <div class="triangulo_sup"></div>
+                </div></a></div>
+          </div>
+        </section>
+        <!-- 	EVENTOS
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <section class="col-xs-12 col-md-8">
+          <div class="eventos col-xs-12">
+            <header>
+              <h2 class="text-center">EVENTOS</h2>
+            </header>
+            <div class="row">
+              <article class="col-xs-12 col-sm-6">
+                <figure><img src="assets/img/img.jpg" class="img-responsive">
+                  <h4>PRESENTACIÓN DEL PROYECTO FINAL DEL CURSO DE AUTOMATIZACIÓN INDUSTRIAL</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus eveniet consectetur impedit qui nobis accusantium.</p>
+                </figure>
+                <div class="center-block">
+                  <button>Leer más</button>
+                </div>
+              </article>
+              <article class="col-xs-12 col-sm-6">
+                <figure><img src="assets/img/img.jpg" class="img-responsive">
+                  <h4>PRESENTACIÓN DEL PROYECTO FINAL DEL CURSO DE AUTOMATIZACIÓN INDUSTRIAL</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus eveniet consectetur impedit qui nobis accusantium.</p>
+                </figure>
+                <div class="center-block">
+                  <button>Leer más</button>
+                </div>
+              </article>
+            </div>
+            <div class="center-block"><a href="#">MÁS NOVEDADES</a></div>
+          </div>
+          <div class="center-block col-md-12">
+            <div class="divider_triangle">
+              <div class="triangulo_inf"></div>
+            </div>
+          </div>
+        </section>
+        <!-- 	AGENDA
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <section class="col-xs-12 col-md-4">
+          <div class="agenda col-xs-12">
+            <header>
+              <h2 class="text-center">AGENDA</h2>
+            </header>
+            <div class="col-xs-12"><span class="col-xs-2">22</span>
+              <div class="col-xs-10">
+                <h4>ENERO 2016</h4>
+                <p> Matricula Extemporánea de los Curso de Nivelación</p>
+              </div>
+            </div>
+            <div class="col-xs-12"><span class="col-xs-2">31</span>
+              <div class="col-xs-10">
+                <h4>ENERO 2016</h4>
+                <p> Concurso Ordinario de Admisión</p>
+              </div>
+            </div>
+            <div class="col-xs-12"><span class="col-xs-2">09</span>
+              <div class="col-xs-10">
+                <h4>ENERO 2016</h4>
+                <p> Clausura de los Cursos de Nivelación</p>
+              </div>
+            </div>
+            <div class="col-xs-12"><span class="col-xs-2">15</span>
+              <div class="col-xs-10">
+                <h4>ENERO 2016</h4>
+                <p> Inicio Ciclo Introductorio</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 	VIDEO
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <section class="video col-xs-12 col-md-5">
+          <div id="container_video">
+            <iframe src="https://www.youtube-nocookie.com/embed/Ybp_mqem8l4" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </section>
+        <!-- 	MAPA
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <section class="map col-xs-12 col-md-7">
+          <div id="container_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.585081210205!2d-76.94434908503688!3d-12.072043745658373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6e79034dc63%3A0x393610bdc506718b!2sFacultad+de+Ingenieria+y+Arquitectura!5e0!3m2!1ses!2spe!4v1455204747377" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </section>
+      </section>
+      <!-- 	Social Principal
+      –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      
+      -->
+      <div class="main_social">
+        <div id="container-img-social" class="col-xs-12"><img src="{{ ruta_base }}assets/img/jovenes2.jpg" class="img-responsive"></div>
+        <div id="container-icons"><a href="https://twitter.com/udesanmartin" target="_black" class="content_icons"><i id="small" class="fa fa-twitter fa-2x"></i><i id="medium" class="fa fa-twitter fa-3x"></i><i id="large" class="fa fa-twitter fa-4x"></i></a><a href="#" class="content_icons"><i id="small" class="fa fa-youtube fa-2x"></i><i id="medium" class="fa fa-youtube fa-3x"></i><i id="large" class="fa fa-youtube fa-4x"></i></a><a href="#" class="content_icons"><i id="small" class="fa fa-facebook fa-2x"></i><i id="medium" class="fa fa-facebook fa-3x"></i><i id="large" class="fa fa-facebook fa-4x"></i></a></div>
+      </div>
+      <!-- 	FOOTER
+      =========================================================
+      
+      -->
+      <footer class="col-md-12">
+        <div id="footer">
+          <div id="content-footer">
+            <p>AV. LA FONTANA 1250 URB. STA. PATRICIA/TELÉFONO: (511) 208-600 FAX: 2086024</p>
+            <P id="copyright">COPYRIGHT © ÁREA DE DISEÑO GRÁFICO Y MULTIMEDIA - FIA, USMP. TODOS LOS DERECHOS RESERVADOS</P>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="http://localhost:8004/assets/js/jquery.min.js"></script>
+    <script src="http://localhost:8004/assets/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8004/assets/js/angular.min.js"></script>
+    <script src="http://localhost:8004/assets/js/main.js"></script>
+    <script src="http://localhost:8004/assets/js/main_angular.js"></script>
+    <script src="http://localhost:8004/assets/js/remodal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+/* ===========================================
+   CSS Reset
+   =========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0 none;
+  font-size: 100%;
+  font-style: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* ===========================================
+   General Imports
+   =========================================== */
+
+@import "_vars";
+@import "_mixins";
+@import "layouts/includes/_header";
+@import "layouts/includes/_footer";
+@import "layouts/includes/_menu-secondary";
+@import "layouts/includes/_main-social";
+
+
+/* ===========================================
+   Contents Style
+   =========================================== */
+
+@import "_ctn-main";
+
+
+
+
+
+
+/* ===========================================
+   General Style
+   =========================================== */
+
+.main_content {
+  width: 100%;
+}
+
+.center-block {
+  @include flex(row, center , center);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.content {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.container {
+  min-width: 80%;
+  height: auto;
+  margin-bottom: 28px;
+  @include flex(row, space-between , null);
+  flex-wrap: wrap;
+}
+*/
+

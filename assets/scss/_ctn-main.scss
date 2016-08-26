@@ -1,0 +1,197 @@
+/* Main Content
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+.noticias {
+  margin-bottom: 20px;
+  //background-color: red;
+  article {
+    margin-bottom: 20px;
+    header {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: $fc_secondary;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  a {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    color: $fc_secondary;
+    float: right;
+    margin: 10px 50px 0px 0px;
+    font-weight: bold;
+  }
+}
+
+.content_link {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  //background-color: #4980B8;
+  a {
+    width: 100%;
+    background-color: $bgc_secondary;
+    text-decoration: none;
+    span {
+      width: 100%;
+      padding-top: 35px;
+      padding-bottom: 25px;
+      //height: 70px;
+      color: rgb(255, 255, 255);
+      background-color: $bgc_secondary;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      @include flex(column, center , center);
+    }
+    .divider_triangle {
+      height: 10px;
+      background-color: $bgc_secondary;
+      .triangulo_sup {
+        @include triangulo_sup(10px, 10px, 10px, rgb(255, 255, 255));
+      }
+    }
+  }
+}
+
+.eventos {
+  margin-top: 20px;
+  background-color: $bgc_content;
+  header {
+    margin-bottom: 25px;
+  }
+  div {
+    article {
+      figure {
+        h4 {
+          font-size: 1.3rem;
+          font-weight: bold;
+          text-align: justify;
+        }
+      }
+      button {
+        padding: 5px 20px 5px 20px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        background-color: $bgc_primary;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+  .center-block {
+    a {
+      font-size: 1.4rem;
+      text-decoration: underline;
+      color: $fc_secondary;
+      margin: 0px 0px 20px 0px;
+      font-weight: bold;
+    }
+  }
+  .center-block {
+    padding: 0px;
+    .divider_triangle {
+      background-color: rgb(255, 255, 255);
+      .triangulo_inf {
+        @include triangulo_inf(30px, 30px, 18px, $bgc_content);
+      }
+    }
+  }
+}
+
+.agenda {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid $bgc_content;
+  header {
+    margin-bottom: 25px;
+  }
+  div {
+    span {
+      color: $bgc_secondary;
+      font-size: 4rem;
+      font-weight: bold;
+      @include flex(column, center , center);
+    }
+    div {
+      h4 {
+        color: $bgc_secondary;
+        margin: 0px;
+      }
+      p {
+        color: $fc_title;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.video {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  #container_video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    position: relative;
+    iframe {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      border: 0;
+    }
+  }  
+}
+
+.map {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  #container_map {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 42%;
+    padding-top: 0;
+    position: relative;
+    iframe {
+      width: 100%;
+      height: 95%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      border: 0;
+    }
+  }
+}
+
+/* Mobile Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (max-width: 767px){
+
+}
+
+/* Tablet Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 768px) and (max-width: 991px){
+
+}
+
+/* Desktop Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/* Desktop HD Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 1200px){
+
+}

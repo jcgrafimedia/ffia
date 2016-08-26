@@ -1,0 +1,163 @@
+/* Social Principal
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+.main_social {
+  #container-img-social {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    z-index: 600;
+    img {
+      width: 100%;
+    }
+  }
+  #container-icons {
+    width: 100%;
+    //background-color: red;
+    position: absolute;
+    z-index: 700;
+    @include flex(row, center , center);
+    a {
+      background-color: $bgc_primary;
+      border-radius: 50%;
+      text-decoration: none;
+      @include flex(row, center , center);
+      border-radius: 50%;
+      i {
+        color: rgb(255, 255, 255);
+        }
+    }
+    a:hover {
+      background-color: $bgc_secondary;
+      transition: 0.5s;
+    }
+  }
+
+} //end-main_social
+
+
+/* Mobile Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (max-width: 400px){
+  #container-icons {
+    a {
+      width: 50px;
+      height: 50px;
+      margin: 4.3% 20px 0% 20px;
+      #medium {
+        display: none;
+      }
+      #large {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 401px) and (max-width: 450px){
+  #container-icons {
+    a {
+      width: 50px;
+      height: 50px;
+      margin: 4.8% 20px 0% 20px;
+      #medium {
+        display: none;
+      }
+      #large {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 451px) and (max-width: 550px){
+  #container-icons {
+    a {
+      width: 50px;
+      height: 50px;
+      margin: 5.8% 20px 0% 20px;
+      #medium {
+        display: none;
+      }
+      #large {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Phablet Styles
+  ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 551px) and (max-width: 749px){
+  #container-icons {
+    a {
+      width: 60px;
+      height: 60px;
+      margin: 6.5% 20px 0% 20px;
+      #medium {
+        display: none;
+      }
+      #large {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Tablet Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 750px) and (max-width: 999px){
+  #container-icons {
+    a {
+      width: 80px;
+      height: 80px;
+      margin: 6.3% 20px 0% 20px;
+      #small {
+        display: none;
+      }
+      #large {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Desktop Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 1000px) and (max-width: 1199px){
+  #container-icons {
+    a {
+      width: 80px;
+      height: 80px;
+      margin: 6.8% 20px 0% 20px;
+      #small {
+        display: none;
+      }
+      #large {
+        display: none;
+      }
+    }
+  } 
+}
+
+/* Desktop HD Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 1200px){
+  #container-icons {
+    a {
+      width: 100px;
+      height: 100px;
+      margin: 6.8% 20px 0% 20px;
+      #small {
+        display: none;
+      }
+      #medium {
+        display: none;
+      }
+    }
+  }
+}
