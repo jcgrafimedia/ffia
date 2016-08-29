@@ -75,7 +75,9 @@
 }
 
 #header .menu_dynamic {
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.6s;
 }
 
 #header .menu_dynamic .logo {
@@ -85,40 +87,47 @@
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  transition: 0.6s;
 }
 
 #header .menu_dynamic .logo img {
   width: 100%;
 }
 
-#header .menu_dynamic .nav_principal {
-  margin-left: 20px;
+#header .menu_dynamic nav {
+  padding-left: 30px;
+  padding-right: 0px;
+}
+
+#header .menu_dynamic nav .nav_principal {
+  transition: 0.6s;
+}
+
+#header .menu_dynamic nav .nav_principal li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.6s;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#header .menu_dynamic .nav_principal a {
-  color: white;
-  text-decoration: none;
-}
-
-#header .menu_dynamic .nav_principal a .triangulo_inf {
+#header .menu_dynamic nav .nav_principal li a .triangulo_inf {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -127,21 +136,54 @@
   margin-top: 5px;
 }
 
-#header .menu_dynamic .nav_principal a:hover {
+#header .menu_dynamic nav .nav_principal li a:hover {
   background-color: #2a3744;
   transition: 0.6s;
 }
 
-#header .menu_dynamic .nav_principal #facultad, #header .menu_dynamic .nav_principal #escuelas {
+#header .menu_dynamic nav .nav_principal li .sub_menu {
+  display: none;
+  background-color: #2a3744;
+  transition: 0.6s;
+}
+
+#header .menu_dynamic nav .nav_principal li .sub_menu li a {
+  height: 30px;
+  padding: 4px 10px 4px 10px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#header .menu_dynamic nav .nav_principal li .sub_menu a:hover {
+  background-color: rgba(191, 191, 191, 0.3);
+  transition: 0.6s;
+}
+
+#header .menu_dynamic nav .nav_principal li #menu_fa {
+  width: 200px;
+}
+
+#header .menu_dynamic nav .nav_principal li #menu_esc {
+  width: 320px;
+}
+
+#header .menu_dynamic nav .nav_principal .col-md-1, #header .menu_dynamic nav .nav_principal .col-md-2 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#header .menu_dynamic2 {
+  width: 100%;
 }
 
 #header .menu_dynamic2 .logo2 {
@@ -151,9 +193,9 @@
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -163,28 +205,29 @@
   width: 100%;
 }
 
-#header .menu_dynamic2 .nav_principal2 {
-  margin-left: 20px;
+#header .menu_dynamic2 nav {
+  padding-left: 30px;
+  padding-right: 0px;
+}
+
+#header .menu_dynamic2 nav .nav_principal2 li a {
+  color: #FFFFFF;
+  text-decoration: none;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#header .menu_dynamic2 .nav_principal2 a {
-  color: white;
-  text-decoration: none;
-}
-
-#header .menu_dynamic2 .nav_principal2 a .triangulo_inf {
+#header .menu_dynamic2 nav .nav_principal2 li a .triangulo_inf {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -193,118 +236,153 @@
   margin-top: 5px;
 }
 
-#header .menu_dynamic2 .nav_principal2 a:hover {
+#header .menu_dynamic2 nav .nav_principal2 li a:hover {
   background-color: #2a3744;
   transition: 0.6s;
 }
 
-#header .menu_dynamic2 .nav_principal2 .facultad2, #header .menu_dynamic2 .nav_principal2 .escuelas2 {
+#header .menu_dynamic2 nav .nav_principal2 li .sub_menu {
+  display: none;
+  background-color: #2a3744;
+}
+
+#header .menu_dynamic2 nav .nav_principal2 li .sub_menu li a {
+  height: 30px;
+  padding: 4px 10px 4px 10px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-/*
+#header .menu_dynamic2 nav .nav_principal2 li .sub_menu a:hover {
+  background-color: rgba(191, 191, 191, 0.3);
+  transition: 0.6s;
+}
+
+#header .menu_dynamic2 nav .nav_principal2 li #menu_fa2 {
+  width: 200px;
+}
+
+#header .menu_dynamic2 nav .nav_principal2 li #menu_esc2 {
+  width: 320px;
+}
+
+#header .menu_dynamic2 nav .nav_principal2 .col-md-1, #header .menu_dynamic2 nav .nav_principal2 .col-md-2 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 /* Mobile Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
-@media (max-width: 550px) {
+/*
+@media (max-width: 550px){
   .menu_dynamic {
     height: 30px;
-  }
-  .menu_dynamic .logo {
-    height: 30px;
+    transition: 0.6s;
+    .logo {
+      height: 30px;
+      transition: 0.6s;
+    }
   }
 }
-
+*/
 /* Phablet Styles
   ––––––––––––––––––––––––––––––––––––––––––– */
-@media (min-width: 551px) and (max-width: 749px) {
+/*
+@media (min-width: 551px) and (max-width: 749px){
   .menu_dynamic {
     height: 50px;
-  }
-  .menu_dynamic .logo {
-    height: 50px;
+    transition: 0.6s;
+    .logo {
+      height: 50px;
+      transition: 0.6s;
+    }
   }
 }
-
+*/
 /* Tablet Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
-@media (min-width: 750px) and (max-width: 991px) {
+/*
+@media (min-width: 750px) and (max-width: 991px){
   .menu_dynamic {
     height: 60px;
-  }
-  .menu_dynamic .logo {
-    height: 60px;
+    transition: 0.6s;
+    .logo {
+      height: 60px;
+      transition: 0.6s;
+    }
   }
 }
-
+*/
 /* Desktop Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
-@media (min-width: 992px) and (max-width: 1199px) {
+/*
+@media (min-width: 992px) and (max-width: 1199px){
   .menu_dynamic {
-    height: 80px;
+    height: 70px;
     transition: 0.6s;
+    .logo {
+      height: 70px;
+      transition: 0.6s;
+    }
+    .nav_principal {
+      height: 70px;
+      transition: 0.6s;
+      a {
+        font-size: 1.2rem;
+        padding: 26.5px 15px 26.5px 15px;
+        transition: 0.6s;
+      }
+      .facultad , .escuelas {
+        padding: 26.5px 15px 16.5px 15px;
+        transition: 0.6s;
+      } 
+    }
   }
-  .menu_dynamic .logo {
-    height: 80px;
-    transition: 0.6s;
-  }
-  .menu_dynamic .nav_principal {
-    height: 80px;
-    transition: 0.6s;
-  }
-  .menu_dynamic .nav_principal a {
-    font-size: 1.2rem;
-    padding: 31.5px 15px 31.5px 15px;
-    transition: 0.6s;
-  }
-  .menu_dynamic .nav_principal .facultad, .menu_dynamic .nav_principal .escuelas {
-    padding: 31.5px 15px 21.5px 15px;
-    transition: 0.6s;
-  }
+
+  // Efecto Scroll en Header
+
   .menu_dynamic2 {
     height: 60px;
-    background-color: #2a3744;
+    background-color: rgb(42, 55, 68);
     transition: 0.6s;
   }
+
   .logo2 {
     width: 20%;
     height: 60px;
     margin-right: 5%;
     transition: 0.6s;
   }
+
   .nav_principal2 {
     height: 60px;
     transition: 0.6s;
   }
-  .usmp2, .posgrados2, .institutos2, .epu2, .admision2 {
+
+  .usmp2 , .posgrados2 , .institutos2 , .epu2 , .admision2 {
     font-size: 1.2rem;
     padding: 21.5px 15px 21.5px 15px;
     transition: 0.6s;
   }
-  .facultad2, .escuelas2 {
+
+  .facultad2 , .escuelas2 {
     font-size: 1.2rem;
     padding: 21.5px 15px 11.5px 15px;
     transition: 0.6s;
   }
-  /*
-  .sub_menu_fa {
-    top: 80px;
-    left: 95px;
-  }
-  .sub_menu_esc {
-    top: 80px;
-    left: 188px;
-  }
-  */
-}
 
+}
+*/
 /* Desktop HD Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
 @media (min-width: 1200px) {
@@ -321,6 +399,7 @@
     transition: 0.6s;
   }
   .menu_dynamic .nav_principal a {
+    height: 80px;
     font-size: 1.5rem;
     padding: 29.5px 15px 29.5px 15px;
     transition: 0.6s;
@@ -354,16 +433,6 @@
     padding: 19.5px 15px 9.5px 15px;
     transition: 0.6s;
   }
-  /*
-  .sub_menu_fa {
-    top: 80px;
-    left: 104px;
-  }
-  .sub_menu_esc {
-    top: 80px;
-    left: 213px;
-  }
-  */
 }
 
 /* Footer Styles

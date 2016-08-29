@@ -28,124 +28,205 @@
   } //end-container_nav_icons
 
   .menu_dynamic {
+    width: 100%;
+    //height: 80px;
     background-color: rgba(0 , 0 , 0 , 0.5);
+    transition: 0.6s;
     .logo {
-      @include flex(row, flex-start , center);
+      //height: 80px;
+      @include flex(row, center , center);
+      transition: 0.6s;
       img {
         width: 100%;
       }
-    }
-    .nav_principal {
-      margin-left: 20px;
-      @include flex(row, flex-start , center);
-      a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        .triangulo_inf {
-          @include triangulo_inf(5px, 5px, 5px, $bgc_content);
-          margin-top: 5px;
-        }
-      }
-      a:hover {
-        background-color: $bgc_primary;
+    } //end-nav_icons
+
+    nav {
+      padding-left: 30px;
+      padding-right: 0px;
+      .nav_principal {
         transition: 0.6s;
-      }
-      #facultad , #escuelas {
-        @include flex(column, null , center);
-      }
+        li {
+          a {
+            //height: 80px;
+            color: #FFFFFF;
+            text-decoration: none;
+            //padding: 30px 15px 30px 15px;
+            transition: 0.6s;
+            @include flex(column, center , center);
+            .triangulo_inf {
+              @include triangulo_inf(5px, 5px, 5px, $bgc_content);
+              margin-top: 5px;
+            }
+          }
+          a:hover {
+            background-color: $bgc_primary;
+            transition: 0.6s;
+          }
+          .sub_menu {
+            display: none;
+            background-color: $bgc_primary;
+            transition: 0.6s;
+            li a {
+              height: 30px;
+              padding: 4px 10px 4px 10px;
+              @include flex(column, flex-start , stretch);
+            }
+            a:hover {
+              background-color: rgba(191, 191, 191, 0.3);
+              transition: 0.6s;
+            }
+          } //end-sub_menu
+
+          #menu_fa {
+            width: 200px;
+          }
+
+          #menu_esc {
+            width: 320px;
+          }
+
+        }
+
+        .col-md-1 , .col-md-2 {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+
+      } //end-nav_principal
     }
 
-  } //end-menu_dinamic
+  } //end-menu_dynamic
 
   .menu_dynamic2 {
+    width: 100%;
     .logo2 {
-      @include flex(row, flex-start , center);
+      @include flex(row, center , center);
       img {
         width: 100%;
       }
-    }
-    .nav_principal2 {
-      margin-left: 20px;
-      @include flex(row, flex-start , center);
-      a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        .triangulo_inf {
-          @include triangulo_inf(5px, 5px, 5px, $bgc_content);
-          margin-top: 5px;
+    } //end-nav_icons
+
+    nav {
+      padding-left: 30px;
+      padding-right: 0px;
+      .nav_principal2 {
+        li {
+          a {
+            //height: 80px;
+            color: #FFFFFF;
+            text-decoration: none;
+            //padding: 30px 15px 30px 15px;
+            @include flex(column, center , center);
+            .triangulo_inf {
+              @include triangulo_inf(5px, 5px, 5px, $bgc_content);
+              margin-top: 5px;
+            }
+          }
+          a:hover {
+            background-color: $bgc_primary;
+            transition: 0.6s;
+          }
+          .sub_menu {
+            display: none;
+            background-color: $bgc_primary;
+            li a {
+              height: 30px;
+              padding: 4px 10px 4px 10px;
+              @include flex(column, flex-start , stretch);
+            }
+            a:hover {
+              background-color: rgba(191, 191, 191, 0.3);
+              transition: 0.6s;
+            }
+          } //end-sub_menu
+
+          #menu_fa2 {
+            width: 200px;
+          }
+
+          #menu_esc2 {
+            width: 320px;
+          }
+
         }
-      }
-      a:hover {
-        background-color: $bgc_primary;
-        transition: 0.6s;
-      }
-      .facultad2 , .escuelas2 {
-        @include flex(column, null , center);
-      }
+
+        .col-md-1 , .col-md-2 {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+
+      } //end-nav_principal
     }
 
-  } //end-menu_dinamic
+  } //end-menu_dynamic2
 
 } //end-header
 
-/*
+
 /* Mobile Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
-
+/*
 @media (max-width: 550px){
   .menu_dynamic {
     height: 30px;
+    transition: 0.6s;
     .logo {
       height: 30px;
+      transition: 0.6s;
     }
   }
 }
-
+*/
 /* Phablet Styles
   ––––––––––––––––––––––––––––––––––––––––––– */
-
+/*
 @media (min-width: 551px) and (max-width: 749px){
   .menu_dynamic {
     height: 50px;
+    transition: 0.6s;
     .logo {
       height: 50px;
+      transition: 0.6s;
     }
   }
 }
-
+*/
 /* Tablet Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
-
+/*
 @media (min-width: 750px) and (max-width: 991px){
   .menu_dynamic {
     height: 60px;
+    transition: 0.6s;
     .logo {
       height: 60px;
+      transition: 0.6s;
     }
   }
 }
-
+*/
 /* Desktop Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
-
+/*
 @media (min-width: 992px) and (max-width: 1199px){
   .menu_dynamic {
-    height: 80px;
+    height: 70px;
     transition: 0.6s;
     .logo {
-      height: 80px;
+      height: 70px;
       transition: 0.6s;
     }
     .nav_principal {
-      height: 80px;
+      height: 70px;
       transition: 0.6s;
       a {
         font-size: 1.2rem;
-        padding: 31.5px 15px 31.5px 15px;
+        padding: 26.5px 15px 26.5px 15px;
         transition: 0.6s;
       }
       .facultad , .escuelas {
-        padding: 31.5px 15px 21.5px 15px;
+        padding: 26.5px 15px 16.5px 15px;
         transition: 0.6s;
       } 
     }
@@ -182,18 +263,9 @@
     padding: 21.5px 15px 11.5px 15px;
     transition: 0.6s;
   }
-  /*
-  .sub_menu_fa {
-    top: 80px;
-    left: 95px;
-  }
-  .sub_menu_esc {
-    top: 80px;
-    left: 188px;
-  }
-  */
-}
 
+}
+*/
 /* Desktop HD Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -209,6 +281,7 @@
       height: 80px;
       transition: 0.6s;
       a {
+        height: 80px;
         font-size: 1.5rem;
         padding: 29.5px 15px 29.5px 15px;
         transition: 0.6s;
@@ -252,14 +325,4 @@
     transition: 0.6s;
   }
 
-  /*
-  .sub_menu_fa {
-    top: 80px;
-    left: 104px;
-  }
-  .sub_menu_esc {
-    top: 80px;
-    left: 213px;
-  }
-  */
 }

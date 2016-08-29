@@ -43,7 +43,7 @@ $(function() {
 
 	/* 	Efecto Scroll en Header
 		================================================================*/
-
+	
 	var flag = false;
 	var scroll;
 	var size;
@@ -221,10 +221,10 @@ $(function() {
 			}
 		}
 	});
-
+	
 	/* 	Efecto Sub-Menu
 	================================================================*/
-	/*
+	
 	$('#facultad').hover(
 		function dentro() {
 			$('#menu_fa').css('display' , 'block');
@@ -274,7 +274,6 @@ $(function() {
 			$('#escuelas').css('background-color' , 'transparent');
 		}
 	);
-	
-	*/
+
 });
 

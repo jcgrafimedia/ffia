@@ -46,12 +46,40 @@
         –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
         
         -->
-        <div id="container_menu" class="menu_dynamic row"><a id="usmp_logo" href="{{ ruta_base }}" class="logo col-xs-4 col-xs-offset-1 col-md-3"><img src="{{ ruta_base }}assets/img/usmp_fia.png" class="img-responsive"></a>
-          <nav id="main_nav" class="nav_principal col-md-7 hidden-xs hidden-sm"><a href="http://www.usmp.edu.pe/" target="_black" id="usmp" class="usmp">USMP</a><a href="" id="facultad" class="facultad">FACULTAD
-              <div class="triangulo_inf"></div></a>
-            <nav id="menu_fa" class="hidden-sm hidden-md hidden-lg"><a href="{{ ruta_base }}facultad/decano">Palabras del decano</a><a href="{{ ruta_base }}facultad/autoridades">Autoridades</a><a href="directorio">Directorio</a><a href="acreditaciones">Acreditaciones</a><a href="convenios">Convenios</a><a href="anual">Memoria anual usmp</a><a href="historia">Historia</a><a href="organigrama">Organigrama</a></nav><a href="" id="escuelas" class="escuelas">ESCUELAS
-              <div class="triangulo_inf"></div></a>
-            <nav id="menu_esc" class="hidden-sm hidden-md hidden-lg"><a href="#">Ciencias Aeronáuticas</a><a href="#">Ingeniería Civil</a><a href="#">Ingeniería de Computación y Sistemas</a><a href="#">Ingeniería Electrónica</a><a href="#">Ingeniería Industrial</a><a href="#">Ingeniería en Industrias Alimentarias</a><a href="#">Arquitectura</a></nav><a href="http://www.usmp.edu.pe/posgradofia/" id="posgrados" target="_black" class="posgrados">POSGRADOS</a><a href="http://www.usmp.edu.pe/ivuc/" id="institutos" target="_black" class="institutos">INSTITUTOS</a><a href="http://www.epu.edu.pe/" id="epu" target="_black" class="epu">EPU</a><a href="http://admision.usmp.edu.pe/" id="admision" target="_black" class="admision">ADMISIÓN</a>
+        <div id="container_menu" class="menu_dynamic"><a id="usmp_logo" href="{{ ruta_base }}" class="logo col-xs-4 col-xs-offset-1 col-md-3"><img src="{{ ruta_base }}assets/img/usmp_fia.png" class="img-responsive"></a>
+          <nav class="col-md-7 hidden-xs hidden-sm">
+            <ul id="main_nav" class="nav_principal">
+              <li class="col-md-1"><a href="http://www.usmp.edu.pe/" target="_black" id="usmp" class="usmp">USMP</a></li>
+              <li class="col-md-2"><a href="" id="facultad" class="facultad">FACULTAD
+                  <div class="triangulo_inf"></div></a>
+                <ul id="menu_fa" class="sub_menu">
+                  <li><a href="{{ ruta_base }}facultad/decano">Palabras del decano</a></li>
+                  <li><a href="{{ ruta_base }}facultad/autoridades">Autoridades</a></li>
+                  <li><a href="directorio">Directorio</a></li>
+                  <li><a href="acreditaciones">Acreditaciones</a></li>
+                  <li><a href="convenios">Convenios</a></li>
+                  <li><a href="anual">Memoria anual usmp</a></li>
+                  <li><a href="historia">Historia</a></li>
+                  <li><a href="organigrama">Organigrama</a></li>
+                </ul>
+              </li>
+              <li class="col-md-2"><a href="" id="escuelas" class="escuelas">ESCUELAS
+                  <div class="triangulo_inf"></div></a>
+                <ul id="menu_esc" class="sub_menu">
+                  <li><a href="http://www.usmp.edu.pe/epca/" target="_blank">Ciencias Aeronáuticas</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/civil/" target="_blank">Ingeniería Civil</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/sistemas/" target="_blank">Ingeniería de Computación y Sistemas</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/electronica/" target="_blank">Ingeniería Electrónica</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/industrial/" target="_blank">Ingeniería Industrial</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/alimentarias/" target="_blank">Ingeniería en Industrias Alimentarias</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/arquitectura/" target="_blank">Arquitectura</a></li>
+                </ul>
+              </li>
+              <li class="col-md-2"><a href="http://www.usmp.edu.pe/posgradofia/" id="posgrados" target="_black" class="posgrados">POSGRADOS</a></li>
+              <li class="col-md-2"><a href="http://www.usmp.edu.pe/ivuc/" id="institutos" target="_black" class="institutos">INSTITUTOS</a></li>
+              <li class="col-md-1"><a href="http://www.epu.edu.pe/" id="epu" target="_black" class="epu">EPU</a></li>
+              <li class="col-md-2"><a href="http://admision.usmp.edu.pe/" id="admision" target="_black" class="admision">ADMISIÓN</a></li>
+            </ul>
           </nav>
         </div>
       </header>
