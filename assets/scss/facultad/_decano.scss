@@ -1,0 +1,103 @@
+
+/* Palabras del decano
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+.decano {
+	header {
+		h2 {
+    		font-weight: bold;
+  		}
+	}
+	.limitador {
+    	height: 1px;
+    	margin: 10px 0px 20px 0px;
+    	background-color: $bgc_secondary;
+  	}
+  	article {
+  		div {
+		  	#img_decano {
+		  		margin-bottom: 20px;
+		  		@include flex(row, center , center);
+		  	}
+	  	}
+  		p {
+  			text-align: justify;
+  		}
+  		#firma {
+  			margin-top: 30px;
+		    @include flex(row, flex-end , null);
+		    p {
+		      font-weight: bold;
+		      @include flex(row, center , center);
+			    span {
+			    	text-align: center;
+			    	margin: 0px;
+			    }
+		    }
+		}
+  	}
+}
+
+/* Mobile Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (max-width: 767px){
+	header {
+		h2 {
+    		font-size: 1.8rem;
+  		}
+	}
+	#firma {
+		p {
+		  margin: 0px 10px 0px 0px;
+		}
+	}
+}
+
+/* Tablet Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 768px) and (max-width: 991px){
+	header {
+		h2 {
+    		font-size: 2rem;
+  		}
+	}
+	#firma {
+		p {
+		  margin: 0px 50px 0px 0px;
+		}
+	}
+}
+
+/* Desktop Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 992px) and (max-width: 1199px){
+	header {
+		h2 {
+    		font-size: 2.1rem;
+  		}
+	}
+	#firma {
+		p {
+		  margin: 0px 50px 0px 0px;
+		}
+	}
+}
+
+/* Desktop HD Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 1200px){
+	header {
+		h2 {
+    		font-size: 2.2rem;
+  		}
+	}
+	#firma {
+		p {
+		  margin: 0px 50px 0px 0px;
+		}
+	}
+}

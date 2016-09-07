@@ -1,0 +1,144 @@
+/* Menu Facultad
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+#menu_facultad {
+	width: 100%;
+	background-color: #EEEEEE;
+	position: fixed;
+	z-index: 900;
+	padding-left: 5%;
+	div {
+		@include flex(row, flex-start , center);
+		a {
+			text-decoration: none;
+			color: #1F2533;
+			font-family: "century-gothic";
+			//margin-right: 10px;
+			//margin-left: 10px;
+			font-weight: bold;
+		}
+		i {
+			color: #1F2533;
+		}
+	}	
+}
+
+/* Mobile Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (max-width: 550px){
+	#menu_facultad {
+		padding-top: 55px;
+		@include flex(column, flex-start , center);
+		div {
+			a {
+				margin-top: 8px;
+				margin-bottom: 8px;
+				margin-right: 10px;
+				margin-left: 0px;
+				font-size: 1.2rem;
+			}
+			i {
+				margin-right: 10px;
+				margin-left: 0px;
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
+/* Phablet Styles
+  ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 551px) and (max-width: 749px){
+	#menu_facultad {
+		padding-top: 75px;
+		@include flex(column, flex-start , center);
+		div {
+			a {
+				margin-top: 8px;
+				margin-bottom: 8px;
+				margin-right: 10px;
+				margin-left: 0px;
+				font-size: 1.2rem;
+			}
+			i {
+				margin-right: 10px;
+				margin-left: 0px;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+/* Tablet Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 750px) and (max-width: 991px){
+	#menu_facultad {
+		padding-top: 95px;
+		@include flex(column, flex-start , center);
+		div {
+			a {
+				margin-top: 8px;
+				margin-bottom: 8px;
+				margin-right: 10px;
+				margin-left: 5px;
+				font-size: 1.2rem;
+			}
+			i {
+				margin-right: 10px;
+				margin-left: 0px;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+/* Desktop Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 992px) and (max-width: 1199px){
+	#menu_facultad {
+		padding-top: 105px;
+		@include flex(row, flex-start , center);
+		div {
+			a {
+				margin-top: 30px;
+				margin-bottom: 30px;
+				margin-right: 10px;
+				margin-left: 10px;
+				font-size: 1.2rem;
+			}
+			i {
+				margin-right: 10px;
+				margin-left: 10px;
+				font-size: 1rem;
+			}
+		}	
+	}
+}
+
+/* Desktop HD Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 1200px){
+	#menu_facultad {
+		padding-top: 115px;
+		@include flex(row, flex-start , center);
+		div {
+			a {
+				margin-top: 30px;
+				margin-bottom: 30px;
+				margin-right: 10px;
+				margin-left: 10px;
+				font-size: 1.3rem;
+			}
+			i {
+				margin-right: 10px;
+				margin-left: 10px;
+				font-size: 1rem;
+			}
+		}
+	}
+}

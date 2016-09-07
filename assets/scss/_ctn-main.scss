@@ -42,7 +42,6 @@
       background-color: $bgc_secondary;
       text-align: center;
       font-weight: bold;
-      font-size: 1.2rem;
       @include flex(column, center , center);
     }
     .divider_triangle {
@@ -172,26 +171,50 @@
    ––––––––––––––––––––––––––––––––––––––––––– */
 
 @media (max-width: 767px){
-
+  .content_link {
+    a {
+      span {
+        font-size: 1.1rem;
+      }
+    }
+  }
 }
 
 /* Tablet Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
 
 @media (min-width: 768px) and (max-width: 991px){
-
+  .content_link {
+    a {
+      span {
+        font-size: 1.1rem;
+      }
+    }
+  }
 }
 
 /* Desktop Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
 
 @media (min-width: 992px) and (max-width: 1199px){
-
+  .content_link {
+    a {
+      span {
+        font-size: 1.1rem;
+      }
+    }
+  }
 }
 
 /* Desktop HD Styles
    ––––––––––––––––––––––––––––––––––––––––––– */
 
 @media (min-width: 1200px){
-
+  .content_link {
+    a {
+      span {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

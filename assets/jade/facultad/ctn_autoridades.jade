@@ -1,0 +1,309 @@
+extends ../layouts/layout_facultad
+
+block content
+
+		div(class="autoridades col-xs-12 col-md-12")
+
+			header
+				h2 AUTORIDADES
+
+			div(class="row limitador")
+
+			article(id="direccion" , class="col-xs-12")
+
+				header
+					h2 Organos de Dirección
+
+				div(class="ctn_autoridades col-sm-6")
+
+					div(class="col-md-4")
+						img(id="chang" , src="{{ ruta_base }}assets/img/autoridades/chang.gif" , class="img-responsive center-block")
+					div(class="col-md-8")
+						div(class="texto")
+							p El Decano es el representante de la Facultad de Ingeniería y Arquitectura ante la Asamblea Universitaria, el Consejo Universitario y otras instituciones públicas y privadas, para lo cual se encuentra incluido de las prerrogativas inherentes a su cargo.
+							span Ing. José Antonio Chang Escobedo
+							span Rector de la Universidad de San Martín de Porres
+
+				div(class="ctn_autoridades col-sm-6")
+
+					div(class="col-md-4")
+						img(id="celi" , src="{{ ruta_base }}assets/img/autoridades/chang.gif" , class="img-responsive center-block")
+
+					div(class="col-md-8")
+						div(class="texto")
+							p El Decano es el representante de la Facultad de Ingeniería y Arquitectura ante la Asamblea Universitaria, el Consejo Universitario y otras instituciones públicas y privadas, para lo cual se encuentra incluido de las prerrogativas inherentes a su cargo.
+							span Ing. Luis Celi Saavedra
+							span Decano
+							span decanofia@usmp.pe
+
+			article(class="col-xs-12")
+
+				div(class="panel-group" id="accordion" role="tablist" aria-multiselectable="true")
+
+					header
+						h2 Organos de Linea
+
+					//Dirección de Escuelas Profesionales
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading1")
+							h4(class="panel-title")
+								a(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne") Dirección de Escuelas Profesionales
+								div(class="triangulo_inf")
+
+						div(id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1")
+							div(class="panel-body")
+								p La Dirección de cada Escuela Profesional de la Facultad de Ingeniería y Arquitectura de la Universidad de San Martín de Porres se encarga de administrar su respectiva Escuela Profesional en la cual se da una formación integral al estudiante para desempeñarse correctamente en los diversos aspectos que corresponde a su respectiva carrera.
+								p La Facultad de Ingeniería y Arquitectura cuenta con cinco Escuelas Profesionales, estas son:
+
+								div(class="directores panel-group" id="esc_accordion" role="tablist" aria-multiselectable="true")
+
+									//Ingeniería de Computación y Sistemas
+
+									div(class="panel")
+										div(class="panel-heading" role="tab" id="sub_hed1")
+											h4(class="panel-title")
+												i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+												a(role="button" data-toggle="collapse" data-parent="#esc_accordion" href="#esc_sistemas" aria-expanded="true" aria-controls="collapseOne") Escuela Profesional de Ingeniería de Computación y Sistemas.
+
+										div(id="esc_sistemas" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub_hed1")
+											div(class="panel-body")
+												h4(class="text-center") Dirección de la Escuela Profesional de Ingeniería de Computación y Sistemas
+												p La carrera de Ingeniería de Computación y Sistemas es una especialidad orientada a formar profesionales cuya labor se basa en el análisis, diseño e implementación de sistemas, pudiendo ser éstos organizacionales, administrativos, industriales, de infraestructura, etc. Para ello utiliza un enfoque sistémico y se apoya principalmente en la utilización de Tecnologías de Información: Computación, Informática, Comunicaciones, Redes, Multimedia, Imágenes y otras.
+												div(class="firma")
+													span Ing. Ludvik Daniel Medic Corrales
+													span Director de la Escuela Profesional de Ingeniería de Computación y Sistemas 
+													a(href="mailto:lmedicc@usmp.pe") lmedicc@usmp.pe
+
+									//Ingeniería Electrónica
+
+									div(class="panel")
+										div(class="panel-heading" role="tab" id="sub_hed2")
+											h4(class="panel-title")
+												i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+												a(class="collapsed" role="button" data-toggle="collapse" data-parent="#esc_accordion" href="#esc_electronica" aria-expanded="false" aria-controls="collapseTwo") Escuela Profesional de Ingeniería Electrónica.
+
+										div(id="esc_electronica" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub_hed2")
+											div(class="panel-body")
+												h4(class="text-center") Dirección de la Escuela Profesional de Ingeniería Electrónica
+												p El Ingeniero Electrónico utiliza en forma óptima los dispositivos, circuitos y sistemas electrónicos de procesamiento de datos, en el diseño, producción y mantenimiento de equipos y sistemas electrónicos que permiten superar las limitaciones físicas del hombre poniendo la tecnología a su servicio y logrando el progreso y bienestar de la sociedad.
+												p Para tal fin, el Ingeniero Electrónico debe poseer una formación integral, técnico, humanística y ética que le permita el eficiente desempeño de su profesión identificado plenamente con los problemas e intereses de la sociedad.
+												p El Ingeniero Electrónico de la FIA, en particular, recibe una sólida formación académica, con énfasis en el desarrollo e implementación de la técnica digital, hardware de computadoras, comunicaciones y redes de computadoras con aplicación inmediata en el área de la Telemática y de la Automatización Industrial.
+												div(class="firma")
+													span Ing. Jorge Tejada Polo
+													span Director de la Escuela Profesional de Ingeniería Electrónica
+													a(href="mailto:jtejadap@usmp.pe") jtejadap@usmp.pe
+
+									//Ingeniería Industrial
+
+									div(class="panel")
+										div(class="panel-heading" role="tab" id="sub_hed3")
+											h4(class="panel-title")
+												i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+												a(class="collapsed" role="button" data-toggle="collapse" data-parent="#esc_accordion" href="#esc_industrial" aria-expanded="false" aria-controls="collapseTwo") Escuela Profesional de Ingeniería Industrial.
+
+										div(id="esc_industrial" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub_hed3")
+											div(class="panel-body")
+												h4(class="text-center") Dirección de la Escuela Profesional de Ingeniería Industrial
+												p La carrera de Ingeniería Industrial es una especialidad orientada a formar profesionales cuya labor se basa en el análisis, diseño e implementación de Sistemas de Producción. Para ello utiliza un enfoque integral y se apoya principalmente en la utilización de las Nuevas Tecnologías de Procesamiento Industrial.
+												div(class="firma")
+													span Ing. Luis Cárdenas Lucero 
+													span Director de la Escuela Profesional de Ingeniería Industrial
+													a(href="mailto:lcardenasl@usmp.pe") lcardenasl@usmp.pe
+
+									//Ingeniería en Industrias Alimentarias
+
+									div(class="panel")
+										div(class="panel-heading" role="tab" id="sub_hed4")
+											h4(class="panel-title")
+												i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+												a(class="collapsed" role="button" data-toggle="collapse" data-parent="#esc_accordion" href="#esc_alimentarias" aria-expanded="false" aria-controls="collapseTwo") Escuela Profesional de Ingeniería en Industrias Alimentarias.
+
+										div(id="esc_alimentarias" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub_hed4")
+											div(class="panel-body")
+												h4(class="text-center") Dirección de la Escuela Profesional de Industrias Alimentarias
+												p La Escuela de Ingeniería en Industrias Alimentarias de la Universidad de San Martín de Porres tiene como objetivo formar Ingenieros en Industrias Alimentarias capacitados para el trabajo profesional de alta calidad y competitivos internacionalmente, con sólidos valores humanísticos, éticos y morales. Este profesional estará especializado en la producción y transformación de alimentos, en el manejo de los procesos industriales alimentarios y en la mejora de la calidad de los alimentos. Asimismo podrá dirigir o colaborar en la gestión de empresas del sector alimentario, obteniendo productos o servicios de excelencia, en el marco de las nuevas tendencias y exigencias del mercado, previniendo y/o solucionando los efectos del impacto ambiental de la industria alimentaria.
+												div(class="firma")
+													span Ing. Edy Dalmiro Barnett Mendoza 
+													span Director de la Escuela Profesional de Industrias Alimentarias 
+													a(href="mailto:ebarnettm@usmp.pe") ebarnettm@usmp.pe
+
+									//Ingeniería Civil
+
+									div(class="panel")
+										div(class="panel-heading" role="tab" id="sub_hed5")
+											h4(class="panel-title")
+												i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+												a(class="collapsed" role="button" data-toggle="collapse" data-parent="#esc_accordion" href="#esc_civil" aria-expanded="false" aria-controls="collapseTwo") Escuela Profesional de Ingeniería Civil.
+
+										div(id="esc_civil" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub_hed5")
+											div(class="panel-body")
+												h4(class="text-center") Dirección de la Escuela Profesional de Ingeniería Civil
+												p El Ingeniero Civil, formado en la Universidad de San Martín de Porres posee un conjunto armónico de conocimientos de Ciencias Básicas y de Ciencias de la Ingeniería y Gestión de Empresas; con sólidos principios ético morales que lo capaciten para desarrollar soluciones de infraestructuras técnicamente factibles, económicamente sustentables, social y ambientalmente compatibles mediante el uso intensivo de software.
+												div(class="firma")
+													span Ing. Ruben Darío Cuadros Ricra
+													span Director de la Escuela Profesional de Ingeniería Civil
+													a(href="mailto:rcuadrosr@usmp.pe") rcuadrosr@usmp.pe
+
+									//Arquitectura y Urbanismo
+
+									div(class="panel")
+										div(class="panel-heading" role="tab" id="sub_hed6")
+											h4(class="panel-title")
+												i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+												a(class="collapsed" role="button" data-toggle="collapse" data-parent="#esc_accordion" href="#esc_arquitectura" aria-expanded="false" aria-controls="collapseTwo") Escuela Profesional de Arquitectura y Urbanismo.
+
+										div(id="esc_arquitectura" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub_hed6")
+											div(class="panel-body")
+												h4(class="text-center") Dirección de la Escuela Profesional de Arquitectura y Urbanismo
+												p La carrera de Arquitectura se orienta a la formación de profesionales cuya actividad se basa en proyectar espacios y formas construibles funcionales, manifestándose como un transformador del medio físico.
+												div(class="firma")
+													span Arq. Gorki Mesones Vargas
+													span Director de la Escuela Profesional de Arquitectura y Urbanismo
+													a(href="mailto:gmesonesv@usmp.pe") gmesonesv@usmp.pe
+
+									//Ciencias Aeronáuticas
+
+									div(class="panel")
+										div(class="panel-heading" role="tab" id="sub_hed7")
+											h4(class="panel-title")
+												i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+												a(class="collapsed" role="button" data-toggle="collapse" data-parent="#esc_accordion" href="#esc_aeronauticas" aria-expanded="false" aria-controls="collapseTwo") Escuela Profesional de Ciencias Aeronáuticas.
+
+										div(id="esc_aeronauticas" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sub_hed7")
+											div(class="panel-body")
+												h4(class="text-center") Dirección de la Escuela Profesional de Ciencias Aeronáuticas
+												p La carrera profesional de Ciencias Aeronáuticas ofrece una preparación orientada al dominio de las operaciones aerocomerciales, tanto en tierra como en el aire. En tierra, para gestionar eficientemente la operación de aerolíneas y aeropuertos; en el aire, para operar de manera segura y efectiva aeronaves, tanto de pasajeros como de carga.
+												p La Escuela brinda a sus alumnos la mejor preparación con equipos de última generación: un simulador de vuelo, igual a los que utilizan las grandes aerolíneas del mundo, y el avión de instrucción más moderno del país, con cero horas de vuelo.
+												p Después de 5 años de estudios, equivalentes a 10 ciclos, la Escuela te otorga el grado de Bachiller en Ciencias Aeronáuticas y el título de Licenciado en Ciencias Aeronáuticas.
+												div(class="firma")
+													span Ing. Jesús Huamán Mosqueira
+													span Director de la Escuela Profesional de Ciencias Aeronáuticas
+													a(href="mailto:jhuamanm@usmp.pe") jhuamanm@usmp.pe
+
+
+
+					//Instituto de Investigación
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading2")
+							h4(class="panel-title")
+								a(class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapseTwo") Instituto de Investigación
+								div(class="triangulo_inf")
+
+						div(id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2")
+							div(class="panel-body")
+								p El Instituto de Investigación de la Facultad de Ingeniería y Arquitectura de la USMP es el organismo encargado de proyectar, coordinar, realizar y promover la investigación en la Facultad, en concordancia con la política general trazada por la Universidad en el área. Tiene además como uno de sus objetivos más importantes proveer o coadyuvar a la formación de investigadores en las especialidades de computación y sistemas, electrónica e ingeniería industrial empleando los recursos con que cuenta la Facultad: profesores, laboratorios, centro de computo, biblioteca, tecnología, etc.
+								i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+								a(href="{{ ruta_base }}files/Instituto_de_Investigacion_FIA.pdf" , target="_blank") Mayor información
+								div(class="firma")
+									span Dr. Jaime Palacios Olivos
+									span Director del Instituto de Investigación
+
+								p Proyectos
+								ul
+									li
+										i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+										span Unidad de Investigación y Desarrollo de Proyectos Académicos, de la Escuela Profesional de Ingeniería de Computación y Sistemas.
+									li
+										i(class="fa fa-chevron-circle-right espaciado_icons" aria-hidden="true")
+										span Grupo de Investigación y Desarrollo en Procesamiento Digital de Señales e Imágenes (GIDEPSI)
+
+
+
+					//Oficina de Extensión y Proyección Universitaria
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading3")
+							h4(class="panel-title")
+								a(class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapseTwo") Oficina de Extensión y Proyección Universitaria
+								div(class="triangulo_inf")
+
+						div(id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3")
+							div(class="panel-body")
+								p La Oficina de Extensión y Proyección Universitaria, es el órgano de línea encargado de planear, dirigir y controlar las actividades de proyección de la Facultad hacia la comunidad, de acuerdo a los lineamientos que establece el Estatuto de la Universidad.
+								p En tal sentido, la Facultad organiza actividades de cultura general y de carácter profesional, tales como cursos y servicios de extensión universitaria, en las diversas especialidades de Ingeniería de Computación y Sistemas, de Ingeniería Industrial, de Ingeniería Electrónica, de Ingeniería Civil y de Arquitectura, dirigidas a personas que no sean solo sus alumnos regulares, sino también a sus graduados, titulados y comunidad en general.
+								p Tiene como misión la tarea de difundir en la modalidad de extensión y proyección universitaria, programas culturales y académicos que permitan a los interesados capacitarse en diferentes disciplinas. Dichos programas contribuirán en la formación integral de las personas.
+								div(class="firma")
+									span Dr. Jefferson López Goycochea
+									span Director de la Oficina de Extensión y Proyección Universitaria
+									a(href="mailto:jlopezg@usmp.pe") jlopezg@usmp.pe
+
+
+					//Sección de Postgrado
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading4")
+							h4(class="panel-title")
+								a(class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapseTwo") Sección de Postgrado
+								div(class="triangulo_inf")
+
+						div(id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4")
+							div(class="panel-body")
+								p La sección de postgrado es el órgano de apoyo de la Facultad que canaliza el interés por realizar estudios de perfeccionamiento. La sección Postgrado de la Facultad ofrece estudios de post-grado conducentes a la obtención del grado académico de MAESTRÍA EN INGENIERÍA DE COMPUTACIÓN Y SISTEMAS, como aporte de la aplicación de las Tecnologías de Información a la modernización del Comercio, la Industria y la Sociedad en general en nuestro país.
+								div(class="firma")
+									span Ing. Manuel Alejandro Cáceres Lampen
+									span Director de la Secc. Postgrado
+									a(href="mailto:mcaceresl@usmp.pe") mcaceresl@usmp.pe
+
+
+
+					header
+						h2 Organos de Apoyo
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading5")
+							h4(class="panel-title")
+								a(class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapseTwo") Secretaría de la Facultad
+								div(class="triangulo_inf")
+
+						div(id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5")
+							div(class="panel-body") asdasdasdasdasd
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading6")
+							h4(class="panel-title")
+								a(class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapseTwo") Departamento Académico
+								div(class="triangulo_inf")
+
+						div(id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6")
+							div(class="panel-body") asdasdasdasdasd
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading7")
+							h4(class="panel-title")
+								a(class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapseTwo") Coordinación Académica
+								div(class="triangulo_inf")
+
+						div(id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7")
+							div(class="panel-body") asdasdasdasdasd
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading8")
+							h4(class="panel-title")
+								a(class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapseTwo") Oficina Administrativa
+								div(class="triangulo_inf")
+
+						div(id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8")
+							div(class="panel-body") asdasdasdasdasd
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading9")
+							h4(class="panel-title")
+								a(class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapseTwo") Oficina de Grados y Títulos
+								div(class="triangulo_inf")
+
+						div(id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9")
+							div(class="panel-body") asdasdasdasdasd
+
+					div(class="panel")
+						div(class="panel-heading" role="tab" id="heading10")
+							h4(class="panel-title")
+								a(class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapseTwo") Oficina de Bienestar Universitario
+								div(class="triangulo_inf")
+
+						div(id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10")
+							div(class="panel-body") asdasdasdasdasd
+
+
+

@@ -1,0 +1,131 @@
+
+/* Autoridades
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+.autoridades {
+	header {
+		h2 {
+    		font-weight: bold;
+  		}
+	}
+	.limitador {
+    	height: 1px;
+    	margin: 10px 0px 20px 0px;
+    	background-color: $bgc_secondary;
+  	}
+
+  	#direccion {
+  		margin-bottom: 20px;
+  		header {
+  			h2 {
+  				margin-bottom: 30px;
+  			}
+  		}
+  		.ctn_autoridades {
+  			padding-left: 0px;
+  			padding-right: 0px;
+  		}
+  		.texto {
+  			p {
+  				text-align: justify;
+  			}
+  			span {
+  				@include flex(column, center , center);
+  				text-align: center;
+  			}
+  		}
+  	} //end-direccion
+
+  	article {
+      header {
+        h2 {
+          margin-bottom: 20px;
+        }
+      }
+      ul li a {
+        text-decoration: none;
+      }
+      .panel-title {
+        @include flex(row, flex-start , center);
+        a {
+          transition: 0.6s;
+          text-decoration: none;
+        }
+        .triangulo_inf {
+          @include triangulo_inf(5px, 5px, 5px, #000000);
+          margin-left: 8px;
+        }
+        .giro {
+          transition: 0.6s;
+          transform: rotate(180deg);
+        }
+      }
+      .panel-body {
+        background-color: #F4F4F4;
+        p {
+          text-align: justify;
+        }
+      }
+      .espaciado_icons {
+        margin-right: 8px;
+      }
+      .directores {
+        a {
+          color: #274F86;
+          text-decoration: none;
+        }
+        .panel-body {
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+      }
+      .firma {
+        margin-top: 25px;
+        @include flex(column, flex-start , center);
+      }
+  	} //end-article
+}
+
+/* Mobile Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (max-width: 767px){
+	header {
+		h2 {
+    		font-size: 1.8rem;
+  		}
+	}
+}
+
+/* Tablet Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 768px) and (max-width: 991px){
+	header {
+		h2 {
+    		font-size: 2rem;
+  		}
+	}
+}
+
+/* Desktop Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 992px) and (max-width: 1199px){
+	header {
+		h2 {
+    		font-size: 2.1rem;
+  		}
+	}
+}
+
+/* Desktop HD Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 1200px){
+	header {
+		h2 {
+    		font-size: 2.2rem;
+  		}
+	}
+}

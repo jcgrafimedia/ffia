@@ -1,7 +1,7 @@
 $(function() {
 
 	/* 	Action del Menu Principal
-		================================================================*/
+		================================================================ */
 
 	var URLactual = window.location;
 	var ruta_base = 'http://localhost:8004/';
@@ -18,35 +18,66 @@ $(function() {
 	}else
 
 	if(URLactual == ruta_base + 'torneos/2016/federacion.html' ||
-	   URLactual ==	ruta_base + 'torneos/2016/categoria/sub18/jugadores.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/sub18/resultados1.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/sub18/resultados2.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/juvenil/jugadores.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/juvenil/resultados1.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/juvenil/resultados2.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/infantil/jugadores.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/infantil/resultados1.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/infantil/resultados2.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/calichin/jugadores.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/calichin/resultados1.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/calichin/resultados2.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/precalichin/jugadores.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/precalichin/resultados1.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/precalichin/resultados2.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/base/jugadores.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/base/resultados1.html' ||
-	   URLactual == ruta_base + 'torneos/2016/categoria/base/resultados2.html'){
+	   URLactual ==	ruta_base + 'torneos/2016/categoria/sub18/jugadores.html'){
 		
 		$('#copa').css('background-color', '#1585CF');
 
 	}
 
 	/* 	Efecto Scroll en Header
-		================================================================*/
+		================================================================ */
 	
 	var flag = false;
 	var scroll;
 	var size;
+
+	$('#facultad').hover(
+		function dentro() {
+			$('#facultad').css('background-color' , 'rgb(42, 55, 68)');
+			$('#menu_fa').css('width' , '200px');
+			$('#menu_fa').css('display' , 'block');
+		},
+		function fuera() {
+			$('#facultad').css('background-color' , 'transparent');
+			$('#menu_fa').css('display' , 'none');
+		}
+	);
+
+	$('#escuelas').hover(
+		function dentro() {
+			$('#escuelas').css('background-color' , 'rgb(42, 55, 68)');
+			$('#menu_esc').css('width' , '320px');
+			$('#menu_esc').css('display' , 'block');
+		},
+		function fuera() {
+			$('#escuelas').css('background-color' , 'transparent');
+			$('#menu_esc').css('display' , 'none');
+		}
+	);
+
+	$('#menu_fa').hover(
+		function dentro() {
+			$('#facultad').css('background-color' , 'rgb(42, 55, 68)');
+			$('#menu_fa').css('width' , '200px');
+			$('#menu_fa').css('display' , 'block');
+		},
+		function fuera() {
+			$('#facultad').css('background-color' , 'transparent');
+			$('#menu_fa').css('display' , 'none');
+		}
+	);
+
+	$('#menu_esc').hover(
+		function dentro() {
+			$('#escuelas').css('background-color' , 'rgb(42, 55, 68)');
+			$('#menu_esc').css('width' , '320px');
+			$('#menu_esc').css('display' , 'block');
+		},
+		function fuera() {
+			$('#escuelas').css('background-color' , 'transparent');
+			$('#menu_esc').css('display' , 'none');
+		}
+	);
 
 	$(window).scroll(function(event) {
 		scroll = $(window).scrollTop();
@@ -133,7 +164,30 @@ $(function() {
 						$('#admision').css('background-color' , 'transparent');
 					}
 				);
+
+				/* 	Efecto Sub-Menu
+				================================================================*/
+				
+				$('#menu_fa').hover(
+					function dentro() {
+						$('#facultad').css('background-color' , 'rgb(228, 75, 48)');
+					},
+					function fuera() {
+						$('#facultad').css('background-color' , 'transparent');
+					}
+				);
+
+				$('#menu_esc').hover(
+					function dentro() {
+						$('#escuelas').css('background-color' , 'rgb(228, 75, 48)');
+					},
+					function fuera() {
+						$('#escuelas').css('background-color' , 'transparent');
+					}
+				);
+
 				flag = true;
+
 			}
 				
 		}else {
@@ -172,6 +226,7 @@ $(function() {
 				$('#facultad').hover(
 					function dentro() {
 						$('#facultad').css('background-color' , 'rgb(42, 55, 68)');
+						$('#menu_fa').css('width' , '200px');
 					},
 					function fuera() {
 						$('#facultad').css('background-color' , 'transparent');
@@ -180,6 +235,7 @@ $(function() {
 				$('#escuelas').hover(
 					function dentro() {
 						$('#escuelas').css('background-color' , 'rgb(42, 55, 68)');
+						$('#menu_esc').css('width' , '320px');
 					},
 					function fuera() {
 						$('#escuelas').css('background-color' , 'transparent');
@@ -217,63 +273,33 @@ $(function() {
 						$('#admision').css('background-color' , 'transparent');
 					}
 				);	
+
+				/* 	Efecto Sub-Menu
+				================================================================*/
+				
+				$('#menu_fa').hover(
+					function dentro() {
+						$('#facultad').css('background-color' , 'rgb(42, 55, 68)');
+					},
+					function fuera() {
+						$('#facultad').css('background-color' , 'transparent');
+					}
+				);
+
+				$('#menu_esc').hover(
+					function dentro() {
+						$('#escuelas').css('background-color' , 'rgb(42, 55, 68)');
+					},
+					function fuera() {
+						$('#escuelas').css('background-color' , 'transparent');
+					}
+				);
+
 				flag = false;
-			}
+
+			} //end-if
 		}
-	});
+	}); // end-evento_scroll
 	
-	/* 	Efecto Sub-Menu
-	================================================================*/
-	
-	$('#facultad').hover(
-		function dentro() {
-			$('#menu_fa').css('display' , 'block');
-			$('#menu_fa').addClass('sub_menu_fa');
-			$('#facultad').css('background-color' , 'rgb(42, 55, 68)');
-		},
-		function fuera() {
-			$('#menu_fa').css('display' , 'none');
-			$('#menu_fa').removeClass('sub_menu_fa');
-			$('#facultad').css('background-color' , 'transparent');
-		}
-	);
-
-		$('#menu_fa').hover(
-			function dentro() {
-				$('#menu_fa').css('display' , 'block');
-				$('#menu_fa').addClass('sub_menu_fa');
-				$('#facultad').css('background-color' , 'rgb(42, 55, 68)');
-			},
-			function fuera() {
-				$('#menu_fa').css('display' , 'none');
-				$('#facultad').css('background-color' , 'transparent');
-			}
-		);
-
-	$('#escuelas').hover(
-		function dentro() {
-			$('#menu_esc').css('display' , 'block');
-			$('#menu_esc').addClass('sub_menu_esc');
-			$('#escuelas').css('background-color' , 'rgb(42, 55, 68)');
-		},
-		function fuera() {
-			$('#menu_esc').css('display' , 'none');
-			$('#menu_esc').removeClass('sub_menu_esc');
-			$('#escuelas').css('background-color' , 'transparent');
-		}
-	);
-
-	$('#menu_esc').hover(
-		function dentro() {
-			$('#menu_esc').css('display' , 'block');
-			$('#menu_esc').addClass('sub_menu_esc');
-			$('#escuelas').css('background-color' , 'rgb(42, 55, 68)');
-		},
-		function fuera() {
-			$('#menu_esc').css('display' , 'none');
-			$('#escuelas').css('background-color' , 'transparent');
-		}
-	);
-
 });
 

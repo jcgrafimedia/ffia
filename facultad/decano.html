@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="fia">
+  <head ng-controller="route">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Facultad de Ingenieria y arquitectura">
+    <meta name="keywords" content="usmp , fia , ffia , ingenieria , arquitectura">
+    <meta name="author" content="Juan Carlos Raúl Contreras Meneses">
+    <link rel="shortcut icon" href="http://localhost:8004/assets/img/logo_usmp.ico">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/normalize.min.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/styles.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/remodal.css">
+    <link rel="stylesheet" href="http://localhost:8004/assets/css/remodal-default-theme.css">
+    <title>USMP FIA</title>
+  </head>
+  <body ng-controller="route">
+    <div id="main_container">
+      <!-- 	HEADER
+      –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      
+      -->
+      <header id="header">
+        <!-- 	MENU DE ICONOS
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <div id="container_nav_icons">
+          <div class="nav_icons col-sm-10"><a href="http://www.usmp.edu.pe/" target="_black"><i class="fa fa-home fa-lg"></i></a><a href="#resultado1"><i class="fa fa-map-marker fa-lg"></i></a><a href="http://outlook.com/usmp.pe" target="_blank"><i class="fa fa-envelope fa-lg"></i></a></div>
+          <!--	MODAL MAPA
+          –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+          
+          -->
+          <div data-remodal-id="resultado1" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" class="remodal">
+            <button data-remodal-action="close" aria-label="Close" class="remodal-close"></button>
+            <section class="map col-xs-12">
+              <div id="container_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.585081210205!2d-76.94434908503688!3d-12.072043745658373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6e79034dc63%3A0x393610bdc506718b!2sFacultad+de+Ingenieria+y+Arquitectura!5e0!3m2!1ses!2spe!4v1455204747377" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- 	MENU PRINCIPAL
+        –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+        
+        -->
+        <div id="container_menu" class="menu_dynamic_general"><a id="usmp_logo" href="{{ ruta_base }}" class="logo col-xs-4 col-xs-offset-1 col-md-3"><img src="{{ ruta_base }}assets/img/usmp_fia.png" class="img-responsive"></a>
+          <nav class="col-md-7 hidden-xs hidden-sm">
+            <ul id="main_nav" class="nav_principal">
+              <li class="col-md-1"><a href="http://www.usmp.edu.pe/" target="_black" id="usmp" class="usmp">USMP</a></li>
+              <li class="col-md-2"><a href="" id="facultad" class="facultad">FACULTAD
+                  <div class="triangulo_inf"></div></a>
+                <ul id="menu_fa" class="sub_menu">
+                  <li><a href="{{ ruta_base }}facultad/decano.html">Palabras del decano</a></li>
+                  <li><a href="{{ ruta_base }}facultad/autoridades.html">Autoridades</a></li>
+                  <li><a href="directorio">Directorio</a></li>
+                  <li><a href="acreditaciones">Acreditaciones</a></li>
+                  <li><a href="convenios">Convenios</a></li>
+                  <li><a href="anual">Memoria anual usmp</a></li>
+                  <li><a href="historia">Historia</a></li>
+                  <li><a href="organigrama">Organigrama</a></li>
+                </ul>
+              </li>
+              <li class="col-md-2"><a href="" id="escuelas" class="escuelas">ESCUELAS
+                  <div class="triangulo_inf"></div></a>
+                <ul id="menu_esc" class="sub_menu">
+                  <li><a href="http://www.usmp.edu.pe/epca/" target="_blank">Ciencias Aeronáuticas</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/civil/" target="_blank">Ingeniería Civil</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/sistemas/" target="_blank">Ingeniería de Computación y Sistemas</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/electronica/" target="_blank">Ingeniería Electrónica</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/industrial/" target="_blank">Ingeniería Industrial</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/alimentarias/" target="_blank">Ingeniería en Industrias Alimentarias</a></li>
+                  <li><a href="http://www.usmp.edu.pe/ffia/escuelas/arquitectura/" target="_blank">Arquitectura</a></li>
+                </ul>
+              </li>
+              <li class="col-md-2"><a href="http://www.usmp.edu.pe/posgradofia/" id="posgrados" target="_black" class="posgrados">POSGRADOS</a></li>
+              <li class="col-md-2"><a href="http://www.usmp.edu.pe/ivuc/" id="institutos" target="_black" class="institutos">INSTITUTOS</a></li>
+              <li class="col-md-1"><a href="http://www.epu.edu.pe/" id="epu" target="_black" class="epu">EPU</a></li>
+              <li class="col-md-2"><a href="http://admision.usmp.edu.pe/" id="admision" target="_black" class="admision">ADMISIÓN</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- 	MENU FACULTAD
+      –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      
+      -->
+      <div id="menu_facultad">
+        <div><i aria-hidden="true" class="fa fa-users fa-lg hidden-md hidden-lg"></i><a href="">ALUMNOS</a><i aria-hidden="true" class="fa fa-chevron-right hidden-xs hidden-sm"></i></div>
+        <div><i aria-hidden="true" class="fa fa-briefcase fa-lg hidden-md hidden-lg"></i><a href="">DOCENTES</a><i aria-hidden="true" class="fa fa-chevron-right hidden-xs hidden-sm"></i></div>
+        <div><i aria-hidden="true" class="fa fa-graduation-cap fa-lg hidden-md hidden-lg"></i><a href="">GRADOS Y TÍTULOS</a><i aria-hidden="true" class="fa fa-chevron-right hidden-xs hidden-sm"></i></div>
+        <div><i aria-hidden="true" class="fa fa-sign-in fa-lg hidden-md hidden-lg"></i><a href="http://intranet.usmp.edu.pe/procesoAcademico/loginSecure.aspx" target="_blank">INTRANET</a><i aria-hidden="true" class="fa fa-chevron-right hidden-xs hidden-sm"></i></div>
+        <div><i aria-hidden="true" class="fa fa-book fa-lg hidden-md hidden-lg"></i><a href="http://www.sibus.usmp.edu.pe/" target="_blank">BIBLIOTECA</a></div>
+      </div>
+      <section class="container padding_ctn">
+        <div class="decano col-xs-12 col-md-12">
+          <header>
+            <h2>PALABRAS DEL DECANO</h2>
+          </header>
+          <div class="row limitador"></div>
+          <article class="row">
+            <div class="col-sm-4"><img id="img_decano" src="{{ ruta_base }}assets/img/img.jpg" class="img-responsive"></div>
+            <div class="col-sm-8">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+              <div id="firma"><span>
+                  <p>Ing. Luis Celi Saavedra</p>
+                  <p>Decano</p></span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 	Social
+      –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+      
+      -->
+      <div class="social">
+        <div id="contact">
+          <div id="telefono">
+            <div><i class="fa fa-phone fa-lg"></i></div><span><span>TELÉFONO</span>
+              <P>012086000</P></span>
+          </div>
+          <div id="direccion_min" class="direccion">
+            <div><i class="fa fa-map-marker fa-lg"></i></div><span><span>DIRECCIÓN</span>
+              <P>Av. La Fontana N° 1250 Urb. Santa Patricia - La Molina</P></span>
+          </div>
+        </div>
+        <div id="divider_1" class="divider_social"></div>
+        <div id="social_group"><a href="https://es-es.facebook.com/udesanmartin" target="_black"><i id="facebook" class="fa fa-facebook fa-lg"></i><span>Facebook</span></a><a href="https://www.youtube.com/user/usmpvirtual" target="_black"><i id="youtube" class="fa fa-youtube fa-lg"></i><span>Youtube</span></a><a href="https://twitter.com/udesanmartin" target="_black"><i id="twitter" class="fa fa-twitter fa-lg"></i><span>Twitter</span></a></div>
+        <div id="divider_2" class="divider_social"></div>
+        <div id="direccion" class="direccion">
+          <div><i class="fa fa-map-marker fa-lg"></i></div><span><span>DIRECCIÓN</span>
+            <P>Av. La Fontana N° 1250</P>
+            <p>Urb. Santa Patricia - La Molina</p></span>
+        </div>
+      </div>
+      <!-- 	FOOTER
+      =========================================================
+      
+      -->
+      <footer class="col-md-12">
+        <div id="footer">
+          <div id="content-footer">
+            <p>AV. LA FONTANA 1250 URB. STA. PATRICIA/TELÉFONO: (511) 208-600 FAX: 2086024</p>
+            <P id="copyright">COPYRIGHT © ÁREA DE DISEÑO GRÁFICO Y MULTIMEDIA - FIA, USMP. TODOS LOS DERECHOS RESERVADOS</P>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="http://localhost:8004/assets/js/jquery.min.js"></script>
+    <script src="http://localhost:8004/assets/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8004/assets/js/angular.min.js"></script>
+    <script src="http://localhost:8004/assets/js/main.js"></script>
+    <script src="http://localhost:8004/assets/js/main_angular.js"></script>
+    <script src="http://localhost:8004/assets/js/remodal.js"></script>
+  </body>
+</html>

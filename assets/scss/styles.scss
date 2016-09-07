@@ -24,15 +24,20 @@
 @import "_vars";
 @import "_mixins";
 @import "layouts/includes/_header";
+@import "layouts/includes/_general_header";
 @import "layouts/includes/_footer";
 @import "layouts/includes/_menu-secondary";
 @import "layouts/includes/_main-social";
+@import "layouts/includes/_social";
+@import "layouts/includes/_menu_facultad";
 
 /* ===========================================
    Contents Style
    =========================================== */
 
 @import "_ctn-main";
+@import "facultad/_decano";
+@import "facultad/_autoridades";
 
 /* ===========================================
    General Style
@@ -44,4 +49,59 @@
 
 .center-block {
   @include flex(row, center , center);
+}
+
+.padding_ctn {
+  padding-bottom: 20px;
+}
+
+@font-face {
+   font-family: "century-gothic";
+   src: url("../../assets/fonts/century-gothic.eot");
+   src: url("../../assets/fonts/century-gothic.ttf");
+}
+
+/* Mobile Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (max-width: 550px){
+  .padding_ctn {
+    padding-top: 230px;
+  }
+}
+
+/* Phablet Styles
+  ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 551px) and (max-width: 749px){
+  .padding_ctn {
+    padding-top: 250px;
+  }
+}
+
+/* Tablet Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 750px) and (max-width: 991px){
+  .padding_ctn {
+    padding-top: 270px;
+  }
+}
+
+/* Desktop Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .padding_ctn {
+    padding-top: 192px;
+  }
+}
+
+/* Desktop HD Styles
+   ––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 1200px){
+  .padding_ctn {
+    padding-top: 203px;
+  }
 }
